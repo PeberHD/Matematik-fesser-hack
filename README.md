@@ -2,9 +2,9 @@
 
 Fesser hack er lavet til at farme XP til dig, så du kan flex på dine små venner.
 ## UPDATE:
-- Tilføjede Safe mode (Samme ting. Bare langsommere)
-- Optimerede det
-- Tilføjede ur 
+- Fixed Safe Mode
+- Addede infinity loop. Crash = reset 
+
 
 ### Credits
 ```
