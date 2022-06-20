@@ -1,0 +1,10 @@
+C:\Users\abelo\source\repos\fesserhack\fesserhack\bin\Debug\fesserhack.exe.config
+C:\Users\abelo\source\repos\fesserhack\fesserhack\bin\Debug\fesserhack.exe
+C:\Users\abelo\source\repos\fesserhack\fesserhack\bin\Debug\fesserhack.pdb
+C:\Users\abelo\source\repos\fesserhack\fesserhack\obj\Debug\fesserhack.csproj.AssemblyReference.cache
+C:\Users\abelo\source\repos\fesserhack\fesserhack\obj\Debug\fesserhack.csproj.SuggestedBindingRedirects.cache
+C:\Users\abelo\source\repos\fesserhack\fesserhack\obj\Debug\fesserhack.csproj.CoreCompileInputs.cache
+C:\Users\abelo\source\repos\fesserhack\fesserhack\obj\Debug\fesserhack.exe
+C:\Users\abelo\source\repos\fesserhack\fesserhack\obj\Debug\fesserhack.pdb
+C:\Users\abelo\source\repos\fesserhack\fesserhack\bin\Debug\WebDriver.dll
+C:\Users\abelo\source\repos\fesserhack\fesserhack\obj\Debug\fesserhack.csproj.CopyComplete
