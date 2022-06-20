@@ -152,7 +152,7 @@ b. Auto tabel
                         spo = 2; // if 2 idk but i just added
                     }
                 }
-            
+
                 Thread.Sleep(400);
                 int tid_tid = 0;
                 int failed = 0;
@@ -206,9 +206,9 @@ b. Auto tabel
                 }
                 catch (Exception)
                 {
-                    failed = failed + 1;    
+                    failed = failed + 1;
                 }
-        }
+            }
         }
 
 
@@ -329,38 +329,44 @@ b. Auto tabel
                 Thread.Sleep(5000);
                 int tid_tid = 0;
                 var tid = Stopwatch.StartNew();
-                for (int i = 0; i < spo; i++)
+                try
                 {
-                    Thread.Sleep(900);
-                    Console.WriteLine("Opgave type: " + spo);
-                    IWebElement tal1 = driver.FindElement(By.XPath("/html/body/div[2]/main/div/article/ul/li/div/div[1]/div[2]/div/div/p[3]/span[2]/span/span/span[1]/span"));
-                    num1 = Convert.ToInt32(tal1.Text);      // getting num 1 and converting it
+                    for (int i = 0; i < spo; i++)
+                    {
+                        Thread.Sleep(900);
+                        Console.WriteLine("Opgave type: " + spo);
+                        IWebElement tal1 = driver.FindElement(By.XPath("/html/body/div[2]/main/div/article/ul/li/div/div[1]/div[2]/div/div/p[3]/span[2]/span/span/span[1]/span"));
+                        num1 = Convert.ToInt32(tal1.Text);      // getting num 1 and converting it
 
-                    IWebElement tal2 = driver.FindElement(By.XPath("/html/body/div[2]/main/div/article/ul/li/div/div[1]/div[2]/div/div/p[3]/span[2]/span/span/span[5]/span"));
-                    num2 = Convert.ToInt32(tal2.Text);      // getting num 2 and converting it
+                        IWebElement tal2 = driver.FindElement(By.XPath("/html/body/div[2]/main/div/article/ul/li/div/div[1]/div[2]/div/div/p[3]/span[2]/span/span/span[5]/span"));
+                        num2 = Convert.ToInt32(tal2.Text);      // getting num 2 and converting it
 
-                    answer = num2 - num1;
-                    string ans;
-                    ans = Convert.ToString(answer);
+                        answer = num2 - num1;
+                        string ans;
+                        ans = Convert.ToString(answer);
 
-                    tid.Stop();
-                    Console.WriteLine("Tal 1 : " + num1);
-                    Console.WriteLine("Tal 2 : " + num2);
-                    Console.WriteLine("Answer = " + answer);
-                    Console.WriteLine("Opgaver klarede (set): " + done);
-                    Console.WriteLine("Opgaver klared i alt: " + doneopgave);
-                    Console.WriteLine("Opgave klarede det tog: " + tid.ElapsedMilliseconds + " MS");
+                        tid.Stop();
+                        Console.WriteLine("Tal 1 : " + num1);
+                        Console.WriteLine("Tal 2 : " + num2);
+                        Console.WriteLine("Answer = " + answer);
+                        Console.WriteLine("Opgaver klarede (set): " + done);
+                        Console.WriteLine("Opgaver klared i alt: " + doneopgave);
+                        Console.WriteLine("Opgave klarede det tog: " + tid.ElapsedMilliseconds + " MS");
 
-                    Thread.Sleep(1500);
-                    driver.FindElement(By.XPath("/html/body/div[2]/main/div/article/ul/li/div/div[1]/div[3]/div/p/input")).SendKeys(ans);
+                        Thread.Sleep(1500);
+                        driver.FindElement(By.XPath("/html/body/div[2]/main/div/article/ul/li/div/div[1]/div[3]/div/p/input")).SendKeys(ans);
 
-                    driver.FindElement(By.XPath("/html/body/div[2]/main/div/article/ul/li/button")).Click();
+                        driver.FindElement(By.XPath("/html/body/div[2]/main/div/article/ul/li/button")).Click();
 
-                    Thread.Sleep(3000);
-                    Console.Clear();
-                    int regn;
-                    regn = Convert.ToInt32(tid.ElapsedMilliseconds);
-                    tid_tid = regn + tid_tid;
+                        Thread.Sleep(3000);
+                        Console.Clear();
+                        int regn;
+                        regn = Convert.ToInt32(tid.ElapsedMilliseconds);
+                        tid_tid = regn + tid_tid;
+                    }
+                }catch (Exception)
+                {
+                    Console.WriteLine("Error");
                 }
 
                 spo = 100;
@@ -373,7 +379,10 @@ b. Auto tabel
 
                 done = done + 1;
 
+
+
+
             }
         }
+        }
     }
-}
